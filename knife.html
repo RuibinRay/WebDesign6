@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knife · Fragua</title>
+  <meta name="description" content="A Fragua Damascus kitchen knife, folded into 256 layers and tempered to its colour.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="theme-color" content="#0E0C0B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300..900&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/fragua.css">
+  <link rel="expect" href="#vt-ready" blocking="render">
+  <script src="js/motion.js"></script>
+</head>
+<body class="knife-page">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav data-on="dark">
+    <nav class="nav__in" aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="index.html#temper">The temper</a></li>
+        <li><a href="index.html#edge">The edge</a></li>
+        <li><a href="index.html#four">The four</a></li>
+        <li><a href="index.html#forge">The forge</a></li>
+      </ul>
+      <a class="brand" href="index.html" aria-label="Fragua, home"><span class="brand__mark" data-mark></span><span class="brand__word">Fragua</span></a>
+      <div class="nav__end"><button class="nav__motion" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button><a class="nav__cta" href="index.html#four" data-res>Bag <span class="count" data-res-count hidden>0</span></a></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="kp-hero" data-tone="dark" data-hero>
+      <div class="kp-hero__copy">
+        <p class="kp-crumb"><a href="index.html#four">The four</a> / <span data-f="kind"></span></p>
+        <h1 class="kp-name" data-f="name"></h1>
+        <p class="kp-kicker" data-f="kicker"></p>
+        <p class="kp-line" data-f="line"></p>
+        <div class="kp-chips" data-chips></div>
+        <p class="kp-price" data-f="price"></p>
+        <fieldset class="handles"><legend>Handle</legend><div class="handles__row" data-handles></div></fieldset>
+        <div class="kp-cta"><button class="btn" type="button" data-add-here>Add to bag</button><a class="link" href="index.html#life">Sharpened for life</a></div>
+      </div>
+      <div class="kp-draw">
+        <canvas data-hero-knife></canvas>
+        <div class="kp-fold"><span data-pattern-no>Pattern Nº 0001</span><button type="button" data-refold>Fold another</button><span>Every blade’s pattern is its own.</span></div>
+        <div class="kp-scale" aria-hidden="true"><div class="kp-scale__bar"><i data-scale-mark></i></div><div class="kp-scale__ends"><span>170 °C · harder</span><span data-scale-label></span><span>tougher · 310 °C</span></div></div>
+      </div>
+    </section>
+
+    <section class="kp-gallery" data-tone="light" aria-labelledby="g-title">
+      <p class="eyebrow rv">Every angle</p>
+      <h2 class="h2" id="g-title" data-split>The steel, <em>up close.</em></h2>
+      <div class="kp-gallery__grid" data-gallery></div>
+    </section>
+
+    <section class="kp-job" data-tone="dark" aria-labelledby="j-title">
+      <div class="slot slot--fill" data-job-img></div>
+      <div class="kp-job__in">
+        <p class="eyebrow rv" data-f="job-eyebrow"></p>
+        <h2 class="h2" id="j-title" data-f="job-title"></h2>
+        <p class="lede rv" data-f="long-1"></p>
+        <p class="rv" data-f="long-2"></p>
+      </div>
+    </section>
+
+    <section class="kp-specs" data-tone="light" aria-labelledby="s-title">
+      <header>
+        <p class="eyebrow rv">Specifications</p>
+        <h2 class="h2" id="s-title" data-split>The details.</h2>
+        <p class="rv">Forged to order. Allow three weeks from the fire to your door.</p>
+        <a class="link rv" href="index.html#edge">See the edge, 1000×</a>
+      </header>
+      <dl data-specs></dl>
+    </section>
+
+    <section class="kp-others" data-tone="dark" aria-labelledby="o-title">
+      <p class="eyebrow rv">The other tempers</p>
+      <h2 class="h2" id="o-title" data-split>Three more <em>colours.</em></h2>
+      <div class="kp-others__grid" data-others></div>
+    </section>
+  </main>
+
+  <div class="bagbar" data-bagbar aria-hidden="true">
+    <div><div class="bagbar__name" data-f="name"></div><div class="bagbar__price" data-f="bar-price"></div></div>
+    <button class="btn" type="button" data-add-here tabindex="-1">Add to bag</button>
+  </div>
+
+  <footer class="foot" data-tone="dark">
+    <div class="foot__top">
+      <a class="brand brand--big" href="index.html" aria-label="Fragua, home"><span class="brand__mark" data-mark></span><span class="brand__word">Fragua</span></a>
+      <p class="foot__tag">Fire, folded.</p>
+    </div>
+    <div class="foot__cols">
+      <div><h3>Knives</h3><ul data-foot-knives></ul></div>
+      <div><h3>Fragua</h3><ul><li><a href="index.html#temper">The temper</a></li><li><a href="index.html#forge">The forge</a></li><li><a href="breakdown.html">The breakdown</a></li></ul></div>
+      <div><h3>Care</h3><ul><li>Free sharpening, for life</li><li>Hand wash, dry at once</li><li>Shipping and returns</li></ul></div>
+    </div>
+    <div class="foot__base">
+      <p>© <span data-year>2026</span> Fragua. A concept brand.</p>
+      <button class="foot__motion" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button>
+    </div>
+  </footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/img/ready.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/shots.js"></script>
+  <script src="js/steel.js"></script>
+  <script>
+    /* fill this knife's image slots before media.js runs */
+    (function () {
+      var k = (new URLSearchParams(location.search).get('k') || '').toLowerCase();
+      if (!window.FRAGUA.byId[k]) k = 'oro';
+      window.FRAGUA.current = k;
+      document.querySelector('[data-gallery]').innerHTML = [['side', 'Side profile'], ['spine', 'The spine keeps its temper colour'], ['hand', 'In a pinch grip']].map(function (g) {
+        return '<figure class="rv"><div class="slot" data-shot="' + k + '-' + g[0] + '" data-img-sizes="(max-width: 900px) 100vw, 33vw"></div><figcaption>' + g[1] + '</figcaption></figure>';
+      }).join('');
+      document.querySelector('[data-job-img]').setAttribute('data-shot', k + '-board');
+    })();
+  </script>
+  <script src="js/media.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/grab.js"></script>
+  <script src="js/knife-page.js"></script>
+  <i id="vt-ready" hidden></i>
+</body>
+</html>

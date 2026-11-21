@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The breakdown · Fragua</title>
+  <meta name="description" content="Fragua taken apart: the idea, the name, the four knives, the colours of the temper, the type, every scroll transition and the pictures still to make.">
+  <meta name="theme-color" content="#0E0C0B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300..900&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/fragua.css">
+  <script src="js/motion.js"></script>
+</head>
+<body class="bd">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav" data-nav data-on="dark">
+    <nav class="nav__in" aria-label="Main">
+      <ul class="nav__links"><li><a href="index.html">The site</a></li><li><a href="shots.html">Shot sheet</a></li></ul>
+      <a class="brand" href="index.html" aria-label="Fragua, home"><span class="brand__mark" data-mark></span><span class="brand__word">Fragua</span></a>
+      <div class="nav__end"><button class="nav__motion" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button><a class="nav__cta" href="knife.html?k=oro">A knife page</a></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="bd-hero" data-tone="dark">
+      <p class="eyebrow">Brand breakdown · concept, November 2026</p>
+      <h1 class="h2" data-split>Fragua, <em>taken apart.</em></h1>
+      <p class="lede rv">The idea, the name, the four knives, the colours of the temper, the type, each scroll transition, and the 22 pictures still to make. Everything here is built and running; only the photographs are missing.</p>
+      <ul class="bd-toc rv">
+        <li><a href="#idea">Idea</a></li><li><a href="#name">Name and mark</a></li><li><a href="#range">The four</a></li><li><a href="#colour">Colour</a></li>
+        <li><a href="#type">Type</a></li><li><a href="#motion">Motion</a></li><li><a href="#pages">Pages</a></li><li><a href="#pictures">Pictures</a></li><li><a href="#invented">Invented</a></li>
+      </ul>
+    </section>
+
+    <section class="bd-sec" id="idea" data-tone="light">
+      <header><p class="eyebrow">01 · The idea</p><h2>The colour is the hardness.</h2></header>
+      <div>
+        <p class="lede">Polished steel changes colour as it is heated: straw, gold, bronze, purple, blue. Tempering at a lower colour leaves the steel harder; at a higher one, tougher. Fragua names each knife for the colour it is tempered to, and leaves that colour on the spine so you can see it.</p>
+        <p>The site follows the knife through the forge in order. Scroll folds a glowing bar from 2 layers to 256, with sparks on every hammer blow. Then scroll raises the temperature, and each knife holds the stage at its colour. Then scroll zooms into the edge a thousand times. The fire, the temper and the edge are all drawn in code, so the draft is finished without a single photograph.</p>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="name" data-tone="light">
+      <header><p class="eyebrow">02 · Name and mark</p><h2>Fragua</h2></header>
+      <div>
+        <p>Spanish for <em>forge</em>: the hearth and the workshop at once. Said <b>FRAH-gwah</b>. The four knives keep the language: Paja (straw), Oro (gold), Bronce (bronze), Azul (blue). The mark is a square billet with four layers folded inside it and one spark.</p>
+        <div class="marks">
+          <div><span data-mark style="width:72px;height:72px;display:block"></span></div>
+          <div class="on-dark"><span data-mark style="width:72px;height:72px;display:block"></span></div>
+          <div class="on-dark"><span class="brand"><span class="brand__mark" data-mark></span><span class="brand__word">Fragua</span></span></div>
+        </div>
+        <p style="margin-top:22px">Before launch: check “Fragua” for trademarks in cutlery (Nice class 8) in your markets.</p>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="range" data-tone="light">
+      <header><p class="eyebrow">03 · The four</p><h2>Four tempers, four jobs.</h2></header>
+      <div>
+        <div class="bd-scroll"><table class="bd-table" data-range></table></div>
+        <div class="bd-knives" data-bdknives></div>
+        <p style="margin-top:22px">Drawn by <code>js/steel.js</code> at true relative size in millimetres. Each blade’s Damascus pattern is computed pixel by pixel from a seed (raindrop, ladder, twist, wild), so “Fold another” on a knife page draws a pattern no one has seen.</p>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="colour" data-tone="light">
+      <header><p class="eyebrow">04 · Colour</p><h2>Fire, then temper.</h2></header>
+      <div>
+        <div class="temper-strip" aria-label="Temper colours from 170 to 310 °C"></div>
+        <div class="temper-strip__ticks"><span>170 °C</span><span>205 Paja</span><span>230 Oro</span><span>260 Bronce</span><span>290 Azul</span><span>310 °C</span></div>
+        <p style="margin-top:22px">The temper scale lives in <code>js/data.js</code> (TEMPER) and colours the stage, the scale, every spine and each knife’s accent. The forge glow comes from a black-body ramp in <code>js/steel.js</code>. Everything else is soot, bone and one ember orange.</p>
+        <div class="swatches" data-swatches></div>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="type" data-tone="light">
+      <header><p class="eyebrow">05 · Type</p><h2>Stamped, read, measured.</h2></header>
+      <div class="type-spec">
+        <div class="big">Fire, folded.<small>Big Shoulders Display 800–900, uppercase. Stamped like a maker’s mark: names, headlines, numbers.</small></div>
+        <div class="mid">205 °C · 62 HRC · 256 layers<small>IBM Plex Mono 500, uppercase, tracked. Readings, labels, buttons.</small></div>
+        <div>Hard carbon steel for the edge, bright nickel steel for the pattern.<small>Instrument Sans at 17 px. Body copy.</small></div>
+      </div>
+    </section>
+
+    <section class="bd-sec bd-dark" id="motion" data-tone="dark">
+      <header><p class="eyebrow">06 · Motion</p><h2>Every scroll transition, and why it is there.</h2></header>
+      <div>
+        <ol class="motion-list">
+          <li><b>The fold (pinned, 5.6 screens)</b><span>Scroll is the hammer. The glowing bar folds seven times, 2 layers to 256; the layer count, the fold number and the heat read out as it goes. Each fold lands in the middle of its slice of scroll, so you feel the blows.</span></li>
+          <li><b>Sparks and the strike</b><span>Every fold fires a burst of sparks off the bar and jolts it down, like a hammer blow. Only going forward; scrolling back is quiet.</span></li>
+          <li><b>Cooling and the etch</b><span>At the end the glow drains from the bar and the stage, the heat readout falls to room temperature, and the etched Damascus pattern comes up out of the orange.</span></li>
+          <li><b>The temper (pinned, 6 screens)</b><span>Scroll is the heat: 175 to 293 °C. The blade takes on the oxide colour of the moment, the stage glows with it, and a scale on the right tracks the temperature and the hardness. Each knife holds the stage at its temper, then the next one crossfades in with a small breath.</span></li>
+          <li><b>The edge, 1000× (pinned, 3.6 screens)</b><span>A cross-section of the Oro zooms from actual size to the apex. Labels appear at the scale where they mean something (spine, the 0.15 mm behind the edge, the 15° bevel, a hair for scale, the apex), and a live scale bar picks a round length for each zoom.</span></li>
+          <li><b>El Juego, the roll (pinned, 4.4 screens)</b><span>A waxed-canvas roll, rolled and strapped. The strap slides off, the canvas unrolls, and the four knives drop into their pockets one at a time, petty to cleaver, at true relative size. The list ticks off the roll and each knife as it lands, then shows the set total and “Add the set to bag”.</span></li>
+          <li><b>Pictures out of the fire</b><span>Forge photographs come up from ember red to full colour as they scroll into view, and sink back if you scroll away.</span></li>
+          <li><b>Words that rise</b><span>Headlines come up word by word from behind a mask.</span></li>
+          <li><b>The knife flies between pages</b><span>Discover from the temper stage or a card flies the drawn knife into the knife page hero and its name into the title. Knife page to knife page, the small drawing grows into the next hero.</span></li>
+          <li><b>Fold another</b><span>On a knife page, a new seed draws a new pattern and a new pattern number.</span></li>
+          <li><b>Pick it up</b><span>Drag any knife on a card or a knife page to turn it over; it carries on with the throw and settles face up or face down. The back shows the layers mirrored, as they run through real steel. Arrow keys flip and tilt it.</span></li>
+          <li><b>Settle and steps</b><span>Stop scrolling inside a pinned scene and it settles onto the nearest resting state: after each hammer blow, at each knife’s temper, at each zoom. The arrow keys and the arrows on the temper stage step between them.</span></li>
+          <li><b>Smooth scroll and fast-forward links</b><span>Lenis on desktop; menu links play the page past you instead of jumping.</span></li>
+        </ol>
+        <p style="margin-top:26px;color:var(--bone-2)">Reduce motion (footer button, or the phone’s system setting) stops sparks, entrance effects, smooth scrolling and page transitions. Scroll-driven scenes stay, because they only move when you scroll.</p>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="pages" data-tone="light">
+      <header><p class="eyebrow">07 · Pages</p><h2>What is built.</h2></header>
+      <div class="bd-scroll">
+        <table class="bd-table">
+          <tr><th>Page</th><th>Sections</th></tr>
+          <tr><td>Home</td><td>The fold (hero) · The temper (the four knives) · The edge, 1000× · The four (cards, bag) · El Juego (the roll) · The forge · Sharpened for life · Footer</td></tr>
+          <tr><td>Knife</td><td><code>knife.html?k=oro</code> (or paja, bronce, azul): drawn knife, fold another, handle choice, temper scale, bag · gallery · its job · specifications · the other tempers · bag bar</td></tr>
+          <tr><td>Breakdown</td><td>This page</td></tr>
+          <tr><td>Shot sheet</td><td><code>shots.html</code>, not linked from the site: every image with its prompt, model, reference and copy buttons</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="pictures" data-tone="light">
+      <header><p class="eyebrow">08 · Pictures</p><h2>22 images, all made.</h2></header>
+      <div>
+        <p>Generated on Higgsfield on 21 November 2026 for 36.48 credits, every one on the first pass (one retried after a dropped connection). Prompts live in <code>js/shots.js</code> with one look bible reused word for word; if a picture is ever removed, its slot falls back to a placeholder that says what goes there.</p>
+        <p><b>Stage 1:</b> the four masters (side profile on the colour of their temper) and four forge scenes without a knife (fire, fold, quench, grind). <b>Stage 2:</b> fourteen images that pass the masters in as references: each knife at work, its spine in macro and in the hand, all four on a walnut rack, and a closing shot after service.</p>
+        <p>The masters came back close to the drawn knives: raindrop, ladder, twist and wild patterns, the handles, and the spine tints. Re-roll one with <code>node higgsfield/generate.mjs &lt;id&gt; --go --force</code> (the old file is kept).</p>
+        <a class="link" href="shots.html">Open the shot sheet</a>
+      </div>
+    </section>
+
+    <section class="bd-sec" id="invented" data-tone="light">
+      <header><p class="eyebrow">09 · Invented</p><h2>Replace before launch.</h2></header>
+      <div><p>All prices, weights, sizes, hardness figures, tempering temperatures per knife, the layer and fold counts, the edge angle and thickness, “three days a knife”, “two smiths”, three-week lead time and free sharpening for life are proposals for the concept. The temper colours themselves are real. The bag stores choices in the browser and sends nothing; connect a store before launch.</p></div>
+    </section>
+  </main>
+
+  <footer class="foot" data-tone="dark">
+    <div class="foot__base"><p>© <span data-year>2026</span> Fragua. A concept brand.</p><button class="foot__motion" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button></div>
+  </footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/img/ready.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/shots.js"></script>
+  <script src="js/steel.js"></script>
+  <script src="js/media.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    (function () {
+      var F = window.FRAGUA, ART = window.FG_ART;
+      document.querySelector('[data-range]').innerHTML = '<tr><th>Knife</th><th>Temper</th><th>Hardness</th><th>Blade</th><th>Best for</th><th>Price</th></tr>' +
+        F.KNIVES.map(function (k) {
+          return '<tr><td><a href="knife.html?k=' + k.id + '" style="color:' + k.spine + ';text-decoration:none">' + k.name + '</a></td><td>' + k.color + ', ' + k.temp + ' °C</td><td>' + k.hrc + ' HRC</td><td>' + k.kind + ', ' + k.cm + ' cm, ' + k.weight + '</td><td>' + k.job + '</td><td>' + F.money(k.price) + '</td></tr>';
+        }).join('');
+      var box = document.querySelector('[data-bdknives]');
+      F.KNIVES.forEach(function (k) { var c = document.createElement('canvas'); box.appendChild(c); ART.knife(k.id, { canvas: c }); });
+      var SW = [
+        ['Soot', '#0E0C0B', 'Base, the forge'], ['Bone', '#ECE6DE', 'Text on dark'], ['Plaster', '#E4DED4', 'Light sections'], ['Ember', '#FF5A1F', 'The one accent'],
+        ['Heat yellow', '#FFD06A', 'Hottest glow'], ['Steel', '#B9BCBF', 'Untempered'], ['Straw', '#E6CC80', 'Paja'], ['Gold', '#C99A3E', 'Oro'],
+        ['Bronze', '#9A5B32', 'Bronce'], ['Blue', '#2E5AA8', 'Azul'],
+      ];
+      document.querySelector('[data-swatches]').innerHTML = SW.map(function (s) { return '<div class="sw"><i style="background:' + s[1] + '"></i><span><b>' + s[0] + '</b>' + s[1] + ' · ' + s[2] + '</span></div>'; }).join('');
+    })();
+  </script>
+</body>
+</html>

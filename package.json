@@ -1,0 +1,15 @@
+{
+  "name": "fragua",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Fragua: fire, folded. Concept Damascus kitchen knife site, plain HTML/CSS/JS, images from Higgsfield.",
+  "scripts": {
+    "serve": "node tools/serve.mjs",
+    "plan": "node higgsfield/generate.mjs",
+    "generate": "node higgsfield/generate.mjs --go",
+    "images": "node higgsfield/optimize.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

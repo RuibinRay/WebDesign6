@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fragua · Fire, folded</title>
+  <meta name="description" content="Fragua forges four Damascus kitchen knives by hand: folded seven times into 256 layers, then tempered to four colours. Paja, Oro, Bronce and Azul.">
+  <meta property="og:title" content="Fragua · Fire, folded">
+  <meta property="og:description" content="Four Damascus kitchen knives, folded into 256 layers and tempered to four colours.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="theme-color" content="#0E0C0B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300..900&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/fragua.css">
+  <!-- hold the first paint until the page scripts have run, so a page morph finds its named elements -->
+  <link rel="expect" href="#vt-ready" blocking="render">
+  <script src="js/motion.js"></script>
+</head>
+<body class="home">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav data-on="dark">
+    <nav class="nav__in" aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#temper">The temper</a></li>
+        <li><a href="#edge">The edge</a></li>
+        <li><a href="#four">The four</a></li>
+        <li><a href="#juego">The set</a></li>
+        <li><a href="#forge">The forge</a></li>
+      </ul>
+      <a class="brand" href="index.html" aria-label="Fragua, home"><span class="brand__mark" data-mark></span><span class="brand__word">Fragua</span></a>
+      <div class="nav__end"><button class="nav__motion" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button><a class="nav__cta" href="#four" data-res>Bag <span class="count" data-res-count hidden>0</span></a></div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ═════════ 1 · THE FOLD (hero): scroll folds the glowing bar, 2 → 256 layers, then it cools ═════════ -->
+    <section class="fold" id="fold" aria-label="Folding the steel">
+      <div class="fold__stage" data-fold>
+        <div class="fold__bar" data-bar><canvas data-billet aria-hidden="true"></canvas></div>
+        <canvas class="fold__sparks" data-sparks aria-hidden="true"></canvas>
+
+        <div class="fold__hero" data-fcap="hero">
+          <p class="eyebrow">Fragua · Damascus kitchen knives, forged by hand</p>
+          <h1 class="fold__title">Fire,<br><span>folded.</span></h1>
+          <p class="fold__intro">Two steels, folded seven times under the hammer into 256 layers, then tempered to four colours. Four knives, one fire.</p>
+          <p class="fold__cue">Scroll to fold the steel</p>
+        </div>
+        <div class="fold__cap" data-fcap="two"><h2>Two steels,<br>one bar.</h2><p>Hard carbon steel for the edge, bright nickel steel for the pattern, stacked and welded together in the fire at 1,150 °C.</p></div>
+        <div class="fold__cap" data-fcap="double"><h2>Every fold<br>doubles it.</h2><p>Cut, stack, hammer flat, back into the fire. Seven times. Two layers become four, then eight, then 256.</p></div>
+        <div class="fold__cap" data-fcap="cool"><h2>256 layers.<br>Now it cools.</h2><p>Out of the fire the glow drains away, and an acid etch brings the layers up: dark carbon, bright nickel, a pattern no one can repeat.</p></div>
+
+        <div class="fold__read" aria-hidden="true"><span>Fold <b data-fold-n>0 / 7</b></span><span>Heat <b data-fold-t>1,150 °C</b></span></div>
+        <div class="fold__count" aria-hidden="true"><b data-layers>2</b><span>layers</span></div>
+      </div>
+    </section>
+
+    <!-- ═════════ 2 · THE TEMPER: scroll raises the heat; each knife holds the stage at its colour ═════════ -->
+    <section class="temper" id="temper" aria-label="Tempering: four colours, four knives">
+      <div class="temper__stage" data-temper>
+        <div class="temper__knives" data-tknives aria-hidden="true"></div>
+        <div class="temper__read" aria-hidden="true"><b data-tread>175 °C</b><span data-thrc>63 HRC</span></div>
+        <div class="temper__scale" aria-hidden="true"><div class="temper__ticks" data-tticks></div><div class="temper__bar"><i class="temper__mark" data-tmark></i></div></div>
+        <div class="temper__panel temper__intro" data-tpanel="intro">
+          <p class="eyebrow">Then we temper it</p>
+          <h2>The colour<br>is the hardness.</h2>
+          <p class="temper__line">Heat polished steel gently and it changes colour: straw, gold, bronze, blue. The lower the colour, the harder the edge. We temper each knife to one colour, polish the blade back to steel, and leave the colour on the spine.</p>
+        </div>
+        <!-- the four knife panels are rendered here from js/data.js -->
+      </div>
+    </section>
+
+    <!-- ═════════ 3 · THE EDGE: scroll zooms a cross-section from actual size to the apex ═════════ -->
+    <section class="edge" id="edge" data-tone="light" aria-labelledby="edge-title">
+      <div class="edge__stage" data-edge>
+        <div class="edge__copy">
+          <p class="eyebrow">The edge</p>
+          <h2 class="h2" id="edge-title">Fifteen<br><em>degrees.</em></h2>
+          <p class="lede">Each side is ground to fifteen degrees, then stropped on leather until the very edge is a thousand times thinner than a hair. Scroll in.</p>
+          <ol class="edge__steps" data-esteps>
+            <li data-z="1"><b>1×</b><span>Actual size: the Oro, end on</span></li>
+            <li data-z="10"><b>10×</b><span>The flat grind, 2.4 mm at the spine</span></li>
+            <li data-z="100"><b>100×</b><span>The bevel, 15° each side</span></li>
+            <li data-z="1000"><b>1000×</b><span>The apex, under a micron</span></li>
+          </ol>
+        </div>
+        <div class="edge__view" aria-hidden="true">
+          <svg class="edge__svg" data-esvg preserveAspectRatio="xMidYMid meet"></svg>
+          <div class="edge__zoom"><span data-ezoom>1×</span><small>magnified</small></div>
+          <div class="edge__scalebar"><i data-ebar></i><span data-elabel>10 mm</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ 4 · THE FOUR ═════════ -->
+    <section class="four" id="four" data-tone="light" aria-labelledby="four-title">
+      <header class="four__head">
+        <div>
+          <p class="eyebrow rv">The four</p>
+          <h2 class="h2" id="four-title" data-split>Four tempers. <em>Four jobs.</em></h2>
+          <p class="lede rv">Every blade is drawn from its own folded bar, so every pattern is different. Choose the colour by the work you do.</p>
+        </div>
+        <div class="slot rv" data-shot="rack"></div>
+      </header>
+      <div class="four__grid" data-kcards></div>
+    </section>
+
+    <!-- ═════════ 4b · EL JUEGO: a strapped roll; it unrolls, the four go into their pockets, you check them off ═════════ -->
+    <section class="juego" id="juego" data-tone="dark" aria-labelledby="juego-title">
+      <div class="juego__stage" data-juego>
+        <div class="juego__copy">
+          <p class="eyebrow">The set · El Juego</p>
+          <h2 class="h2" id="juego-title">One roll.<br><em>Four tempers.</em></h2>
+          <p class="juego__intro" data-juego-line></p>
+          <p class="juego__status" data-juego-status>Rolled and strapped.</p>
+          <div class="juego__check">
+            <p class="juego__check-head"><span>Check the set</span><span data-juego-count>0 of 4 in the roll</span></p>
+            <ul data-juego-list></ul>
+            <div class="juego__sum" data-juego-sum>
+              <p class="juego__total"><span>El Juego</span><b data-juego-price></b></p>
+              <div class="juego__cta"><button class="btn" type="button" data-add-set>Add the set to bag</button><a class="link" href="#four">One at a time</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="juego__scene" aria-hidden="true">
+          <div class="roll" data-roll>
+            <div class="roll__cloth" data-cloth>
+              <div class="roll__inner">
+                <div class="roll__knives" data-roll-knives></div>
+                <div class="roll__pockets"><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="roll__cyl" data-cyl><i class="roll__strap" data-strap></i></div>
+          </div>
+        </div>
+        <p class="juego__hint" data-juego-hint>Scroll to unroll it</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 5 · THE FORGE ═════════ -->
+    <section class="forge" id="forge" data-tone="dark" aria-labelledby="forge-title">
+      <header class="forge__head">
+        <p class="eyebrow rv">The forge</p>
+        <h2 class="h2" id="forge-title" data-split>Two smiths. <em>One fire.</em></h2>
+        <p class="lede rv">Three days a knife, from two bars of steel to an edge. These are the four moments that decide whether it becomes one.</p>
+      </header>
+      <div class="forge__grid">
+        <figure class="fcard"><div class="slot heat" data-shot="forge-fire" data-heat></div><figcaption><span class="mono">Day one · 1,150 °C</span><b>The fire</b>The two steels go in as a stack and come out as one bar, welded by heat and the first blows.</figcaption></figure>
+        <figure class="fcard"><div class="slot heat" data-shot="forge-fold" data-heat></div><figcaption><span class="mono">Day one · seven times</span><b>The fold</b>Cut, stack, hammer. Each fold doubles the layers and every blow moves them, which is where the pattern comes from.</figcaption></figure>
+        <figure class="fcard"><div class="slot heat" data-shot="forge-quench" data-heat></div><figcaption><span class="mono">Day two · 800 °C to cold</span><b>The quench</b>Red hot into oil in under a second. The steel goes glass-hard, and too brittle to use, until it is tempered.</figcaption></figure>
+        <figure class="fcard"><div class="slot heat" data-shot="forge-grind" data-heat></div><figcaption><span class="mono">Day three · by hand</span><b>The grind</b>The bevel is ground by hand on the belt, then on stones, then stropped on leather until it shaves.</figcaption></figure>
+      </div>
+      <ul class="numbers" data-numbers></ul>
+    </section>
+
+    <!-- ═════════ 6 · SHARPENED FOR LIFE ═════════ -->
+    <section class="life" id="life" data-tone="dark" aria-labelledby="life-title">
+      <div class="slot slot--fill" data-shot="closing" data-focus="74% 72%"></div>
+      <div class="life__in">
+        <p class="eyebrow rv">Sharpened for life</p>
+        <h2 class="h2" id="life-title" data-split>Send it back. <em>Forever.</em></h2>
+        <p class="lede rv">When the edge goes dull, post it to us. We sharpen it by hand on stones and send it home, free, for as long as you own it.</p>
+        <div class="life__cta rv"><a class="btn" href="#four">Choose your knife</a><a class="link" href="#edge">How we sharpen</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" data-tone="dark">
+    <div class="foot__top">
+      <a class="brand brand--big" href="index.html" aria-label="Fragua, home"><span class="brand__mark" data-mark></span><span class="brand__word">Fragua</span></a>
+      <p class="foot__tag">Fire, folded.</p>
+    </div>
+    <div class="foot__cols">
+      <div><h3>Knives</h3><ul data-foot-knives></ul></div>
+      <div><h3>Fragua</h3><ul><li><a href="index.html#temper">The temper</a></li><li><a href="index.html#forge">The forge</a></li><li><a href="breakdown.html">The breakdown</a></li></ul></div>
+      <div><h3>Care</h3><ul><li>Free sharpening, for life</li><li>Hand wash, dry at once</li><li>Shipping and returns</li></ul></div>
+    </div>
+    <div class="foot__base">
+      <p>© <span data-year>2026</span> Fragua. A concept brand.</p>
+      <button class="foot__motion" type="button" data-motion-toggle aria-pressed="false">Reduce motion</button>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/img/ready.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/shots.js"></script>
+  <script src="js/steel.js"></script>
+  <script src="js/media.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/grab.js"></script>
+  <script src="js/home.js"></script>
+  <i id="vt-ready" hidden></i>
+</body>
+</html>

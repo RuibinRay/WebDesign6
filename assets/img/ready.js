@@ -1,0 +1,2 @@
+/* Written by higgsfield/optimize.mjs. Lists the images and videos that exist, so the site never requests a missing file. */
+window.FRAGUA_READY = {"img":["azul-board","azul-hand","azul-side","azul-spine","bronce-board","bronce-hand","bronce-side","bronce-spine","closing","forge-fire","forge-fold","forge-grind","forge-quench","oro-board","oro-hand","oro-side","oro-spine","paja-board","paja-hand","paja-side","paja-spine","rack"],"video":[]};
