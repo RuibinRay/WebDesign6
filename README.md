@@ -33,9 +33,13 @@ Concept brand: a two-smith forge making Damascus kitchen knives. **Fragua** is S
 - **Scroll feel:** Lenis inertia on desktop; shortly after scrolling stops inside a pinned scene, the page settles onto the nearest resting state if it is close (after each hammer blow, at each knife’s temper, at each zoom of the edge); left and right arrow keys and the arrows on the temper stage step between them. `FG_SETTLE()` runs it on demand for tests.
 - Page morphs (the drawn knife flies into the knife page), fast-forward menu links and the faint **Reduce motion** button at the top right (also in the footer) come from the shared setup.
 
-## Images: all 22 generated
+## Images and films: all generated
 
-Made on Higgsfield on 2026-11-21 for **36.48 credits** (GPT Image 2.6 2k high at 2.00, Soul Cinematic 2k at 0.12): stage 1, the four masters (`<knife>-side`) and four forge scenes; stage 2, each knife at work, its spine in macro and in the hand, all four on a rack, and a closing shot, each passing its master as a reference. One job dropped its connection and passed on a retry. Originals are in `higgsfield/renders/`, job ids in `higgsfield/manifest.json`. The closing photo's crop is set with `data-focus` in `index.html`.
+First 22 made on Higgsfield on 2026-11-21 for **36.48 credits** (GPT Image 2.6 2k high at 2.00, Soul Cinematic 2k at 0.12): stage 1, the four masters (`<knife>-side`) and four forge scenes; stage 2, each knife at work, its spine in macro and in the hand, all four on a rack, and a closing shot, each passing its master as a reference. One job dropped its connection and passed on a retry. Originals are in `higgsfield/renders/`, job ids in `higgsfield/manifest.json`. The closing photo's crop is set with `data-focus` in `index.html`.
+
+**Knife page v2 (2026-11-21, 99 credits):** per knife a hero photo on slate (`<k>-hero`), and **the cut**, a pinned scroll film of the knife at its job: a 16:9 first frame (`<k>-cut-start`), a last frame made from it (`<k>-cut-end`), and a 5 s Kling 4.0 film between them (`cut-<k>`), cut by the optimiser into 61 desktop and 61 phone frames under `assets/film/`. The film runs on `js/film.js` (ported from Racimo) with three tiers: frames, else a crossfade of the two stills, else the at-work photo. Films average 57–66 brightness out of 255: moody, readable.
+
+**Image logic:** `optimize.mjs` now also writes a 1,400 px size and, per image, a measured subject focus (studio shots: the box around whatever differs from the backdrop; scenes: sharp's attention point eased toward the centre; a `focus` on the shot in `js/shots.js` wins) and a 24 px blur-up preview, cached in `higgsfield/image-meta.json` and shipped in `ready.js`. `media.js` crops every photo on its subject, shows the blurred preview at once, picks 900 / 1,400 / 2,000 px by the slot's real width, loads the first screen eagerly and fades a photo in only once it is decoded.
 
 ```powershell
 node higgsfield/generate.mjs

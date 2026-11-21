@@ -39,20 +39,46 @@
     el.setAttribute('aria-label', s.alt + ' (image not produced yet)');
   }
 
+  /*
+   * A photo, done properly:
+   *   focus     the crop centres on the subject: data-focus on the slot wins, else the focus the optimiser measured
+   *   blur-up   the slot shows a 24 px preview of the photo at once (from ready.js), so it is never an empty box
+   *   sizes     three widths (900, 1400, 2000); the browser picks by the width the slot is actually drawn at
+   *   loading   eager for the first screen and priority shots, lazy (with a generous margin) for the rest
+   *   reveal    decoded off the main thread before it fades in, so the fade never stutters
+   */
+  var META = READY.meta || {};
+  function sizesFor(el) {
+    if (el.getAttribute('data-img-sizes')) return el.getAttribute('data-img-sizes');
+    var w = el.getBoundingClientRect().width || el.parentNode.getBoundingClientRect().width;
+    return w ? Math.ceil(w) + 'px' : '100vw';
+  }
   function picture(el, s) {
+    var m = META[s.id] || {};
     var i = document.createElement('img');
-    i.src = 'assets/img/' + s.id + '.webp';
-    i.srcset = 'assets/img/' + s.id + '-sm.webp 900w, assets/img/' + s.id + '.webp 2000w';
-    i.sizes = el.getAttribute('data-img-sizes') || '100vw';
+    var pos = el.dataset.focus || (m.f ? (m.f[0] * 100).toFixed(1) + '% ' + (m.f[1] * 100).toFixed(1) + '%' : '');
+    if (m.q) {
+      el.style.backgroundImage = 'url(' + m.q + ')';
+      el.style.backgroundSize = 'cover';
+      el.style.backgroundPosition = pos || '50% 50%';
+      el.classList.add('slot--blur');
+    }
     i.alt = s.alt;
     i.decoding = 'async';
-    if (s.priority) { i.loading = 'eager'; i.setAttribute('fetchpriority', 'high'); } else i.loading = 'lazy';
-    if (el.dataset.focus) i.style.objectPosition = el.dataset.focus;
-    i.addEventListener('load', function () { el.classList.add('is-loaded'); });
+    var r = el.getBoundingClientRect();
+    var near = r.top < window.innerHeight * 1.2 && r.bottom > -window.innerHeight * 0.2;
+    if (s.priority || near) { i.loading = 'eager'; if (s.priority || r.top < window.innerHeight) i.setAttribute('fetchpriority', 'high'); } else i.loading = 'lazy';
+    i.sizes = sizesFor(el);
+    i.srcset = 'assets/img/' + s.id + '-sm.webp 900w, ' + (m.md ? 'assets/img/' + s.id + '-md.webp 1400w, ' : '') + 'assets/img/' + s.id + '.webp 2000w';
+    i.src = 'assets/img/' + s.id + '.webp';
+    if (pos) i.style.objectPosition = pos;
+    var shown = false;
+    var show = function () { if (shown) return; shown = true; el.classList.add('is-loaded'); };
+    i.addEventListener('load', function () { (i.decode ? i.decode() : Promise.resolve()).then(show, show); });
     el.innerHTML = '';
     el.appendChild(i);
     el.classList.add('slot--ready');
-    if (i.complete) el.classList.add('is-loaded');
+    if (i.complete && i.naturalWidth) show();
   }
 
   function video(el, id) {

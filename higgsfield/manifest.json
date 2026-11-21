@@ -334,6 +334,286 @@
       "file": "higgsfield/renders/closing.png",
       "seconds": 34,
       "at": "2026-11-21T02:07:44.665Z"
+    },
+    "oro-cut-start": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "oro-side.png"
+      ],
+      "job_id": "879af218-d6f9-401b-ae4f-5179648f1c02",
+      "file": "higgsfield/renders/oro-cut-start.png",
+      "seconds": 43,
+      "at": "2026-11-21T03:24:45.718Z"
+    },
+    "paja-hero": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "paja-side.png"
+      ],
+      "job_id": "49683f4a-d3f9-4874-b39b-bcd71e9cb025",
+      "file": "higgsfield/renders/paja-hero.png",
+      "seconds": 43,
+      "at": "2026-11-21T03:24:46.199Z"
+    },
+    "paja-cut-start": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "paja-side.png"
+      ],
+      "job_id": "3f8a1528-67a2-4c99-abd3-1afac175474d",
+      "file": "higgsfield/renders/paja-cut-start.png",
+      "seconds": 44,
+      "at": "2026-11-21T03:24:47.655Z"
+    },
+    "oro-hero": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "oro-side.png"
+      ],
+      "job_id": "24fd8f9c-5b37-4fa8-9197-1ab762538e63",
+      "file": "higgsfield/renders/oro-hero.png",
+      "seconds": 45,
+      "at": "2026-11-21T03:24:48.184Z"
+    },
+    "bronce-cut-start": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "bronce-side.png"
+      ],
+      "job_id": "148de55f-978a-4312-a08e-1cb427e4b86a",
+      "file": "higgsfield/renders/bronce-cut-start.png",
+      "seconds": 40,
+      "at": "2026-11-21T03:25:25.993Z"
+    },
+    "bronce-hero": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "bronce-side.png"
+      ],
+      "job_id": "8afe1a41-17ab-4ef9-a580-2484ec3ec141",
+      "file": "higgsfield/renders/bronce-hero.png",
+      "seconds": 45,
+      "at": "2026-11-21T03:25:30.597Z"
+    },
+    "azul-cut-start": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "azul-side.png"
+      ],
+      "job_id": "388312d8-99ac-4c2a-b332-59756aed0afe",
+      "file": "higgsfield/renders/azul-cut-start.png",
+      "seconds": 43,
+      "at": "2026-11-21T03:25:31.409Z"
+    },
+    "azul-hero": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "azul-side.png"
+      ],
+      "job_id": "6def58ed-eb66-43c7-8f06-36dd2a59f509",
+      "file": "higgsfield/renders/azul-hero.png",
+      "seconds": 49,
+      "at": "2026-11-21T03:25:36.691Z"
+    },
+    "paja-cut-end": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "paja-cut-start.png"
+      ],
+      "job_id": "7c9dab0e-09c3-47c2-8b21-9e3fe9c61112",
+      "file": "higgsfield/renders/paja-cut-end.png",
+      "seconds": 42,
+      "at": "2026-11-21T03:26:51.322Z"
+    },
+    "oro-cut-end": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "oro-cut-start.png"
+      ],
+      "job_id": "e008a535-dff8-4d79-9fca-e1659b42e3f6",
+      "file": "higgsfield/renders/oro-cut-end.png",
+      "seconds": 42,
+      "at": "2026-11-21T03:26:52.029Z"
+    },
+    "bronce-cut-end": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "bronce-cut-start.png"
+      ],
+      "job_id": "20a6459a-0ac5-49ce-8129-d95e379f9d3a",
+      "file": "higgsfield/renders/bronce-cut-end.png",
+      "seconds": 45,
+      "at": "2026-11-21T03:26:54.914Z"
+    },
+    "azul-cut-end": {
+      "status": "done",
+      "kind": "image",
+      "model": "gpt_image_2_6",
+      "params": {
+        "resolution": "2k",
+        "quality": "high"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "azul-cut-start.png"
+      ],
+      "job_id": "2d0d55fd-c739-430e-8d49-dddebca81c48",
+      "file": "higgsfield/renders/azul-cut-end.png",
+      "seconds": 46,
+      "at": "2026-11-21T03:26:55.422Z"
+    },
+    "cut-oro": {
+      "status": "done",
+      "kind": "film",
+      "model": "kling4_0",
+      "params": {
+        "mode": "image-to-video",
+        "duration": 5,
+        "resolution": "1080p"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "oro-cut-start.png",
+        "oro-cut-end.png"
+      ],
+      "job_id": "cad4fb21-b35d-4825-a944-c2b6f65a0741",
+      "file": "higgsfield/renders/cut-oro.mp4",
+      "seconds": 213,
+      "at": "2026-11-21T03:30:38.494Z"
+    },
+    "cut-paja": {
+      "status": "done",
+      "kind": "film",
+      "model": "kling4_0",
+      "params": {
+        "mode": "image-to-video",
+        "duration": 5,
+        "resolution": "1080p"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "paja-cut-start.png",
+        "paja-cut-end.png"
+      ],
+      "job_id": "e8e87b5d-e293-4d86-9332-42ed1dd3cfbe",
+      "file": "higgsfield/renders/cut-paja.mp4",
+      "seconds": 220,
+      "at": "2026-11-21T03:30:46.377Z"
+    },
+    "cut-bronce": {
+      "status": "done",
+      "kind": "film",
+      "model": "kling4_0",
+      "params": {
+        "mode": "image-to-video",
+        "duration": 5,
+        "resolution": "1080p"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "bronce-cut-start.png",
+        "bronce-cut-end.png"
+      ],
+      "job_id": "f40811ae-bdb8-481c-9659-86c4daf9817b",
+      "file": "higgsfield/renders/cut-bronce.mp4",
+      "seconds": 237,
+      "at": "2026-11-21T03:34:35.460Z"
+    },
+    "cut-azul": {
+      "status": "done",
+      "kind": "film",
+      "model": "kling4_0",
+      "params": {
+        "mode": "image-to-video",
+        "duration": 5,
+        "resolution": "1080p"
+      },
+      "aspect": "16:9",
+      "inputs": [
+        "azul-cut-start.png",
+        "azul-cut-end.png"
+      ],
+      "job_id": "8f7dbe8b-a301-49bf-9d79-0c1afb47d06c",
+      "file": "higgsfield/renders/cut-azul.mp4",
+      "seconds": 229,
+      "at": "2026-11-21T03:34:35.668Z"
     }
   }
 }

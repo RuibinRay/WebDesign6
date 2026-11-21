@@ -35,7 +35,9 @@
   heroCanvas.parentNode.style.setProperty('--ar', (k.blade + k.handle + 22) + ' / ' + (k.height + 22));
   var hero = ART.knife(k.id, { canvas: heroCanvas, trueScale: false });
   if (root.FG_GRAB) root.FG_GRAB(heroCanvas, { label: 'The ' + k.name });
-  heroCanvas.style.viewTransitionName = 'blade-' + k.id; heroCanvas.style.viewTransitionClass = 'blade';
+  /* the page morph lands on the hero photograph: a drawn knife on the card flies in and becomes the photo */
+  var heroPhoto = $('[data-hero-photo]');
+  heroPhoto.style.viewTransitionName = 'blade-' + k.id; heroPhoto.style.viewTransitionClass = 'blade';
   var nameEl = $('.kp-name');
   nameEl.style.viewTransitionName = 'name-' + k.id; nameEl.style.viewTransitionClass = 'name';
 
@@ -82,17 +84,17 @@
   });
   UI.watch(othersEl);
 
-  /* scroll: the bag bar arrives once the hero is behind you; the job photo eases out of a slow zoom */
-  var heroEl = $('[data-hero]'), barEl = $('[data-bagbar]'), foot = $('.foot');
-  var job = $('.kp-job'), jobImg = $('[data-job-img]');
+  /* scroll: the bag bar arrives once the hero is behind you; the hero photo drifts slowly as you leave it */
+  var heroEl = $('[data-hero]'), barEl = $('[data-bagbar]'), foot = $('.foot'), filmSec = $('[data-film-sec]');
   UI.onScroll(function () {
     var vh = window.innerHeight, r = heroEl.getBoundingClientRect();
-    var on = r.bottom < vh * 0.35 && foot.getBoundingClientRect().top > vh;
+    /* hidden while the cut film is pinned, so it never covers the film's timeline */
+    var fr = filmSec ? filmSec.getBoundingClientRect() : null, inFilm = fr && fr.top < vh * 0.5 && fr.bottom > vh * 0.5;
+    var on = r.bottom < vh * 0.35 && foot.getBoundingClientRect().top > vh && !inFilm;
     barEl.classList.toggle('is-on', on);
     barEl.setAttribute('aria-hidden', String(!on));
     barEl.querySelector('button').tabIndex = on ? 0 : -1;
-    var jr = job.getBoundingClientRect();
-    if (jr.bottom > 0 && jr.top < vh) jobImg.style.setProperty('--jz', (1.1 - 0.1 * UI.clamp((vh - jr.top) / (vh + jr.height), 0, 1)).toFixed(4));
+    if (r.bottom > 0) heroPhoto.style.setProperty('--hy', (UI.clamp(-r.top / r.height, 0, 1) * 12).toFixed(2) + '%');
   });
   var rz;
   window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { hero.render(); }, 200); });

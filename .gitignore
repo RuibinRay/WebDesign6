@@ -1,2 +1,4 @@
 node_modules/
 higgsfield/renders/
+higgsfield/*.log
+assets/img/*.tmp
