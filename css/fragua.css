@@ -501,3 +501,7 @@ html.lenis, html.lenis body { height: auto; }
   .juego__scene { position: absolute; left: 0; right: 0; top: 27%; height: 38%; }
   .roll { --W: min(86vw, 360px); }
 }
+
+/* the nav links never wrap; between phone and wide desktop they give way to the logo and the bag */
+.nav__links a { white-space: nowrap; }
+@media (max-width: 1100px) { .nav__links { display: none; } .nav__in { grid-template-columns: auto 1fr; } }
